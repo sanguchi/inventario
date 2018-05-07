@@ -2,7 +2,7 @@
     # IMPORTANTE: Para que funcione este archivo activar el modulo mod_rewrite.so en el archivo de configuración de Apache httpd.conf
 
     # Suponiendo que el listado de directorios esté desactivado, permitimos indexación y activamos el rewrite
-    Options +FollowSymLinks -Indexes
+    # Options +FollowSymLinks -Indexes
     RewriteEngine on
 
     # Usualmente "AllowOverride" debería estar en 'All' en el apache.conf/vhost.conf, pero si no descomentas lo siguiente para evitar un error 404
