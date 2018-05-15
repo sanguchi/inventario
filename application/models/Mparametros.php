@@ -8,7 +8,7 @@ class Mparametros extends CI_Model
 		parent::__construct();
 	}
 
-	public function guardarproveedor($param)
+	public function guardarparametros($param)
 	{
           $campos = array(
 

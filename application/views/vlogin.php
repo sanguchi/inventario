@@ -34,7 +34,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <a href="../../index2.html"><b>Sistema de Inventario</b></a>
       </div><!-- /.login-logo -->
       <div class="login-box-body">
-        <p class="login-box-msg">Identifiquese para ingresar</p>
+        
+        <?php 
+        if($mensaje == "") {
+          echo('<p class="box-footer">Identifiquese para ingresar</p>');
+        } else {
+          echo('<p class="box-footer alert-error">'.$mensaje.'</p>');
+        }
+        ?>
         
         <form action="<?php echo base_url(); ?>clogin/ingresar" method="Post">
           <div class="form-group has-feedback">
@@ -67,7 +74,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <a href="#">¿Has olvidado tu contraseña?</a><br>
         <a href="register.html" class="text-center">Registrarse</a><br>
-        <?php echo $mensaje; ?>
+        
       </div><!-- /.login-box-body -->
     </div><!-- /.login-box -->
 

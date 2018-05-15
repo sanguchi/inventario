@@ -82,6 +82,12 @@
     <!-- script del proyecto -->
     <?php if($this->uri->segment(1)=='cproducto') {?>
        <script src="<?php echo base_url();?>js/rubro.js"></script>       
-    <?php }?>   
+    <?php }?>
+    <!-- script del proyecto cargar solo en vparametros -->
+    <?php if($this->uri->segment(1)=='cparametros') {?>
+       <script src="<?php echo base_url();?>js/parametros.js"></script>
+       <script src="<?php echo base_url();?>js/rubro.js"></script>
+       <script src="<?php echo base_url();?>js/condiva.js"></script>       
+    <?php }?>
   </body>
 </html>

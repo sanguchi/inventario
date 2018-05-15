@@ -176,13 +176,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <h3 class="box-title">Datos Impositivos</h3>
         </div>
         <div class="box-body">
+        
 		    <div class="form-group">
-		      <label for="inputNomImpuesto" class="col-sm-2 control-label">Nombre Impuesto</label>
+		      <label for="inputNomImpuesto" class="col-sm-2 control-label">Tipo Impuesto</label>
 		      <div class="col-sm-10">
-		        <input type="text" class="form-control" name="txtNomImpuesto" value="<?php echo set_value('txtNomImpuesto'); ?>" size="50" id="inputNomImpuesto" placeholder="Ingrese Nombre del Impuesto">
-		      	<?php echo form_error('txtNomImpuesto', '<div class="error text-red">', '</div>'); ?>
-		      </div>
+		        <Select id="inputNomImpuesto" class="form-control" name="selNomImpuesto">
+					    <option value="<?php if (isset($_POST['selNomImpuesto']))
+								{
+									echo $_POST['selNomImpuesto'];
+								} 
+								?>" selected="selected">
+								<?php if (isset($_POST['textoNomImpuesto']))
+								{
+								  echo $_POST['textoNomImpuesto'];
+								} 
+								?>
+					    </option>				
+				    </Select>
+	          	<?php echo form_error('selNomImpuesto', '<div class="error text-red">', '</div>'); ?>
+	        </div>
+	      </div>
+	 		  <input type="hidden" name="textoNomImpuesto" size="40" id="textoNomImpuesto" value="<?php echo set_value('textoNomImpuesto'); ?>">
 		    </div>
+		  </div>
+          
+          
+          
+          
           <!-- Date dd/mm/yyyy -->
           <div class="form-group">
             <label>Date masks:</label>
